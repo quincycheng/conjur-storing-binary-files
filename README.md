@@ -2,14 +2,11 @@
 
 This repo contains the steps for 
 
-1. Setup Conjur OSS
-   Follow the quick start guide to "Setup a Conjur OSS environment" & "Define Policy" according to offical doc (https://www.conjur.org/get-started/)
+1. Setup Conjur OSS by following the quick start guide to "Setup a Conjur OSS environment" & "Define Policy" according to offical doc (https://www.conjur.org/get-started/)
 
-2. Create Keystore file
-   Execute `keytool -genkeypair -alias domain -keyalg RSA -keystore keystore.jks` 
+2. Create a Keystore file by `keytool -genkeypair -alias domain -keyalg RSA -keystore keystore.jks` 
 
-3. Verify the generated keystore file (optional)
-   Try `keytool -list -keystore keystore.jks`
+3. (optional) Verify the generated keystore file by `keytool -list -keystore keystore.jks`
    
 4. Save the file to Conjur
 ```
@@ -23,9 +20,7 @@ docker-compose exec client sh -c "conjur variable value BotApp/secretVar > /tmp/
 docker cp conjur_client:/tmp/output.jks .
 ```
 
-6. To show the raw REST API
-`docker-compose exec client sh -c "RESTCLIENT_LOG=stdout conjur variable value BotApp/secretVar"`
+6. (optional) Show the raw REST API `docker-compose exec client sh -c "RESTCLIENT_LOG=stdout conjur variable value BotApp/secretVar"`
 
-7. Verify the generated keystore file (optional)
+7. Verify the generated keystore file
    Try `keytool -list -keystore output.jks`
-

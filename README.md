@@ -1,6 +1,6 @@
 # conjur-storing-binary-files
 
-This repo contains the steps for 
+This repo contains the steps for storing & retrieving binary files, using JKS as an example
 
 1. Setup Conjur OSS by following the quick start guide to "Setup a Conjur OSS environment" & "Define Policy" according to offical doc (https://www.conjur.org/get-started/)
 
